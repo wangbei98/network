@@ -1,4 +1,4 @@
-#encoding=utf-8
+# coding=utf-8
 import json
 from flask import Flask
 from flask import jsonify,make_response
