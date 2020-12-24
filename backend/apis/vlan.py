@@ -18,6 +18,9 @@ class VlanAPI(Resource):
 		username = args.get('username')
 		password = args.get('password')
 		
+		# 这里调用（操作/验证）脚本
+
+		# 以下为实例代码
 		token = '操作步骤五（telnet完成）：配置Switch1划分VLAN10和VLAN20'
 		response = make_response(jsonify(code=0,data={'token':token},message='OK'))
 		return response
@@ -26,6 +29,10 @@ class VlanAPI(Resource):
 	验证步骤四（telnet完成）：Switch1验证show vlan brief，正确划分
 	'''
 	def get(self):
+		
+		# 这里调用（操作/验证）脚本
+
+		# 以下为实例代码
 		token = '验证步骤四（telnet完成）：Switch1验证show vlan brief，正确划分'
 		response = make_response(jsonify(code=0,data={'token':token},message='OK'))
 		return response
