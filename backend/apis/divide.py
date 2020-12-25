@@ -22,6 +22,6 @@ class DivideAPI(Resource):
 		# 这里调用（操作/验证）脚本
 		
 		# 以下为实例代码
-		token = '操作步骤七（telnet完成）：将Router fa0/0划分为两个子接口'
+		token = 'opearte step 7 : telnet complete：divide Router fa0/0'
 		response = make_response(jsonify(code=0,data={'token':token},message='OK'))
 		return response

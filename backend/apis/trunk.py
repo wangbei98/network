@@ -13,6 +13,6 @@ class TrunkAPI(Resource):
 		# 这里调用（操作/验证）脚本
 
 		# 以下为实例代码
-		token = '操作步骤六（telnet完成）：配置Switch1 fa0/1为Trunk接口，与Router1互连'
+		token = 'opearte step 6 : telnet complete： configurate Switch1 fa0/1 as Trunk,link with Router1'
 		response = make_response(jsonify(code=0,data={'token':token},message='OK'))
 		return response

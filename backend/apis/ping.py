@@ -13,6 +13,6 @@ class PingAPI(Resource):
 		# 这里调用（操作/验证）脚本
 
 		# 以下为实例代码
-		token = '验证步骤五（telnet完成）：验证Router可以ping通PC1和PC2，证明可以相互ping通。'
+		token = 'validate step 5 : telnet complete: validate Router can ping PC1 and PC2'
 		response = make_response(jsonify(code=0,data={'token':token},message='OK'))
 		return response

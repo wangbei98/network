@@ -13,6 +13,6 @@ class IprouteAPI(Resource):
 		# 这里调用（操作/验证）脚本
 
 		# 以下为实例代码
-		token = '验证步骤六（telnet完成）：验证router路由表。'
+		token = 'validate step 6 : telnet complete: valadate router table'
 		response = make_response(jsonify(code=0,data={'token':token},message='OK'))
 		return response
