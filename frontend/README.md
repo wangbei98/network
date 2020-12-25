@@ -1,5 +1,10 @@
 # frontend
 
+## 前端代码
+修改完代码后需要build（npm run build）,完成打包后，后端才能直接访问
+
+
+
 > A Vue.js project
 
 ## Build Setup
