@@ -15,6 +15,11 @@ app = Flask(__name__,
             template_folder = "../dist")
 # app.debug = True
 
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+    return render_template("index.html")
+    
 api = Api(app)
 
 # 请求跨域
