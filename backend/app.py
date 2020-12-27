@@ -10,6 +10,7 @@ from apis.trunk import TrunkAPI
 from apis.vlan import VlanAPI
 from apis.get_test_message import GetTestMessageFromFileAPI
 
+
 app = Flask(__name__,
             static_folder = "../dist/static",
             template_folder = "../dist")

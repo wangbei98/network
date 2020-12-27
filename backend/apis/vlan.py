@@ -3,6 +3,7 @@ import json
 from flask import Flask
 from flask import jsonify,make_response
 from flask_restful import Resource,reqparse
+from apis.basic_operation import excute
 
 class VlanAPI(Resource):
 	'''
@@ -10,9 +11,9 @@ class VlanAPI(Resource):
 	'''
 	def post(self):
 		parse = reqparse.RequestParser()
-		parse.add_argument('ip',type=string,help='错误的ip',default='192.168.5.5')
-		parse.add_argument('username',type=string,help='错误的username',default='root')
-		parse.add_argument('password',type=string,help='错误的password',default='123456')
+		parse.add_argument('ip',type=str,help='错误的ip',default='192.168.5.5')
+		parse.add_argument('username',type=str,help='错误的username',default='root')
+		parse.add_argument('password',type=str,help='错误的password',default='123456')
 		args = parse.parse_args()
 		# 获取当前文件夹id
 		ip = args.get('ip')
@@ -20,6 +21,10 @@ class VlanAPI(Resource):
 		password = args.get('password')
 		
 		# 这里调用（操作/验证）脚本
+
+		# 配置Switch1划分VLAN10和VLAN20
+
+		excute(ip, username, password, './scripts/Split_Vlan.txt')
 
 		# 以下为实例代码
 		token = 'opearte step 5 : telnet complete：configurate Switch1 divide as VLAN10 and VLAN20'
