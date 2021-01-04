@@ -1,0 +1,15 @@
+enable
+config terminal
+vlan 10
+exit
+vlan 20
+exit
+int fa0/2
+switchport mode access
+switchport access vlan 10
+exit
+int fa0/3
+switchport mode access
+switchport access vlan 20
+exit
+end

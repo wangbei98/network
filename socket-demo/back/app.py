@@ -6,15 +6,21 @@ from flask_socketio import SocketIO,send,emit
 import urllib.parse  
 import time
 import json
-
+from flask_restful import Resource,reqparse
+from apis.basic_operation import excute
 
 app = Flask(__name__)  
 
 # 以下两行：实例化socketio对象，并设置跨域
 CORS(app,cors_allowed_origins="*")  
-socketio = SocketIO(app,cors_allowed_origins='*')  
+socketio = SocketIO(app,cors_allowed_origins='*')
 
-
+# 获取当前文件夹id
+Switch_ip = '192.168.5.5'
+Switch_password = '123456'
+Router_ip = '192.168.5.1'
+Router_password = '123456'
+username='root'
 # 通过socketio和前端通信
 # 过程：
 #   1. 前端通过socket向后端socket发送请求
@@ -72,8 +78,9 @@ class ReturnJ(object):
 
 # 测试api接口
 # 由此证明，前端可以调用api接口，来获取后端源源不断的响应
-@app.route('/api/testCall')
+@app.route('/api/testCall',methods=["GET"])
 def testCall():
+
   print("后端收到了前端通过API的调用行为")
   data = {}
   ret = ReturnJ()
@@ -86,6 +93,61 @@ def testCall():
                     namespace='/chat')
     time.sleep(0.1)
   return ret.toJson()
+
+#操作步骤5
+@app.route('/api/vlan',methods=["POST"])
+def VlanAPI():
+    parse = reqparse.RequestParser()
+    parse.add_argument('ip', type=str, help='错误的ip', default='192.168.5.5')
+    parse.add_argument('username', type=str, help='错误的username', default='root')
+    parse.add_argument('password', type=str, help='错误的password', default='123456')
+    args = parse.parse_args()
+    # 获取当前文件夹id
+    Switch_ip= args.get('ip')
+    username = args.get('username')
+    Switch_password= args.get('password')
+
+    # 这里调用（操作/验证）脚本
+
+    # 配置Switch1划分VLAN10和VLAN20
+
+    excute(Switch_ip, username, Switch_password, './scripts/Split_Vlan.txt',socketio)
+    data = {}
+    ret = ReturnJ()
+    ret.data = data
+    return ret.toJson()
+
+#操作步骤6
+@app.route('/api/trunk',methods=["GET"])
+def TrunkAPI():
+    excute(Switch_ip, username, Switch_password, './scripts/Trunk.txt',socketio)
+    data = {}
+    ret = ReturnJ()
+    ret.data = data
+    return ret.toJson()
+
+#操作步骤7
+@app.route('/api/divide',methods=["POST"])
+def DivideAPI():
+
+    parse = reqparse.RequestParser()
+    parse.add_argument('ip',type=str,help='错误的ip',default='192.168.5.1')
+    parse.add_argument('username',type=str,help='错误的username',default='root')
+    parse.add_argument('password',type=str,help='错误的password',default='123456')
+    args = parse.parse_args()
+    # 从前端请求中解析参数
+    Router_ip = args.get('ip')
+    username = args.get('username')
+    Router_password  = args.get('password')
+
+    # 这里调用（操作/验证）脚本
+    # 将Router fa0/0划分为两个子接口
+    excute(Router_ip, username, Router_password, './scripts/Router.txt',socketio)
+    data = {}
+    ret = ReturnJ()
+    ret.data = data
+    return ret.toJson()
+
 
 if __name__ == '__main__':  
     socketio.run(app,debug=True,port=5000)
