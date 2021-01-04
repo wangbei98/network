@@ -6,7 +6,7 @@ pip install Flask-SocketIO==4.3.2
 
 * 运行
 ```
-cd 进backend
+cd 进back
 flask run
 ```
 
