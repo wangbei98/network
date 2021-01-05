@@ -34,6 +34,7 @@ def login_host(host_ip,username,password,socketio):
         socketio.emit('response_data', {'msg': str1},
                       namespace='/chat')
     return tn,flag
+
 # 此函数实现执行传过来的命令文件，并输出其执行结果
 def execute_some_command(tn, conf,password,socketio):
     confp = open(conf, 'r')
@@ -102,7 +103,7 @@ def excute(host_ip,username,password,conf,socketio):
         else:
             break
     if isSuccessExcute==False:
-        logging.warning('网络连接失败,请检查网络后稍后重试！！！' )
+        logging.warning('网络连接失败,请检查网络后稍后重试！！！')
         str1 = '网络连接失败,请检查网络后稍后重试！！！\n'
         socketio.emit('response_data', {'msg': str1},
                       namespace='/chat')

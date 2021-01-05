@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 from flask import Flask
-from flask import request,jsonify  
-from flask_cors import CORS  
+from flask import request,jsonify
+from flask_cors import CORS
 from flask_socketio import SocketIO,send,emit  
-import urllib.parse  
+import urllib.parse
 import time
 import json
 from flask_restful import Resource,reqparse
 from apis.basic_operation import excute
+from apis import vertify
 
-app = Flask(__name__)  
+app = Flask(__name__)
 
 # 以下两行：实例化socketio对象，并设置跨域
-CORS(app,cors_allowed_origins="*")  
+CORS(app,cors_allowed_origins="*")
 socketio = SocketIO(app,cors_allowed_origins='*')
 
 # 获取当前文件夹id
@@ -143,6 +144,83 @@ def DivideAPI():
     # 这里调用（操作/验证）脚本
     # 将Router fa0/0划分为两个子接口
     excute(Router_ip, username, Router_password, './scripts/Router.txt',socketio)
+    data = {}
+    ret = ReturnJ()
+    ret.data = data
+    return ret.toJson()
+
+#验证步骤4
+#show vlan brief
+@app.route('/api/vertifyVlan',methods=["POST"])
+def VertifyVlanAPI():
+    parse = reqparse.RequestParser()
+    parse.add_argument('ip', type=str, help='错误的ip', default='192.168.5.5')
+    parse.add_argument('username', type=str, help='错误的username', default='root')
+    parse.add_argument('password', type=str, help='错误的password', default='123456')
+    args = parse.parse_args()
+    # 获取当前文件夹id
+    Switch_ip= args.get('ip')
+    username = args.get('username')
+    password= args.get('password')
+
+    # 这里调用（操作/验证）脚本
+
+    # 配置Switch1划分VLAN10和VLAN20
+    vertify.vertifyVlan(Switch_ip, username, password, socketio)
+
+    data = {}
+    ret = ReturnJ()
+    ret.data = data
+    return ret.toJson()
+
+#验证步骤5
+#ping
+@app.route('/api/ping',methods=["POST"])
+def Ping():
+    parse = reqparse.RequestParser()
+    parse.add_argument('ip', type=str, help='错误的ip', default='192.168.5.5')
+    parse.add_argument('username', type=str, help='错误的username', default='root')
+    parse.add_argument('password', type=str, help='错误的password', default='123456')
+    args = parse.parse_args()
+    # 获取当前文件夹id
+    Switch_ip= args.get('ip')
+    username = args.get('username')
+    password= args.get('password')
+
+    # 这里调用（操作/验证）脚本
+
+    # 配置Switch1划分VLAN10和VLAN20
+    commandPing1 = 'ping 192.168.10.2'
+    commandPing2 = 'ping 192.168.20.2'
+    vertify.vertifyPing(Router_ip, username, password, commandPing1, socketio)
+    vertify.vertifyPing(Router_ip, username, password, commandPing2, socketio)
+
+    data = {}
+    ret = ReturnJ()
+    ret.data = data
+    return ret.toJson()
+
+#验证步骤6
+#show ip route
+@app.route('/api/ipRoute',methods=["POST"])
+def DivideAPI():
+    parse = reqparse.RequestParser()
+    parse.add_argument('ip',type=str,help='错误的ip',default='192.168.5.1')
+    parse.add_argument('username',type=str,help='错误的username',default='root')
+    parse.add_argument('password',type=str,help='错误的password',default='123456')
+    args = parse.parse_args()
+    # 从前端请求中解析参数
+    Router_ip = args.get('ip')
+    username = args.get('username')
+    password  = args.get('password')
+
+    IP1 = "192.168.10.0"
+    IP2 = "192.168.20.0"
+    IP3 = "192.168.5.0"
+
+    # 这里调用（操作/验证）脚本
+    # 将Router fa0/0划分为两个子接口
+    vertify.vertifyRouter(Router_ip, username, password, IP1, IP2, IP3, socketio)
     data = {}
     ret = ReturnJ()
     ret.data = data
