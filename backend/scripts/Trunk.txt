@@ -1,5 +1,0 @@
-enable
-config terminal
-int fa0/1
-switchport mode trunk
-end
