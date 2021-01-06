@@ -6,7 +6,7 @@ import time
 import telnetlib
 import re
 
-
+sleep_time = 1
 
 def login_host(host_ip,username,password,socketio):
     tn = telnetlib.Telnet()
@@ -47,13 +47,13 @@ def execute_some_command(tn, conf,password,socketio):
                 tn.write(command.encode('ascii') + b'\n')
                 # 等待Password出现后输入密码，最多等待10秒
                 tn.read_until(b'Password: ', timeout=10)
-                time.sleep(2)
+                time.sleep(sleep_time)
                 tn.write(password.encode('ascii') + b'\n')
-                time.sleep(2)
+                time.sleep(sleep_time)
             else:
                 # 执行命令
                 tn.write(command.encode('ascii') + b'\n')
-                time.sleep(2)
+                time.sleep(sleep_time)
             # 获取命令结果
             command_result = tn.read_very_eager().decode('ascii')
             logging.warning('命令执行结果：\n%s' % command_result)
@@ -93,6 +93,7 @@ def excute(host_ip,username,password,conf,socketio):
                 socketio.emit('response_data', {'msg': str1},
                               namespace='/chat')
                 logout_host(tn)
+                return True,'命令执行成功'
             #执行失败的话，重试次数+1
             else:
                 has_reconnect = has_reconnect+1
@@ -101,10 +102,12 @@ def excute(host_ip,username,password,conf,socketio):
                 socketio.emit('response_data', {'msg': str1},
                               namespace='/chat')
         else:
-            break
+
+            return False,'登录失败！！！'
     if isSuccessExcute==False:
         logging.warning('网络连接失败,请检查网络后稍后重试！！！')
         str1 = '网络连接失败,请检查网络后稍后重试！！！\n'
         socketio.emit('response_data', {'msg': str1},
                       namespace='/chat')
+        return False,'网络连接失败,请检查网络后稍后重试！！！\n'
 

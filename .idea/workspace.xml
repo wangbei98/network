@@ -19,7 +19,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc124d61-3d19-46a2-9d9e-7a70d0410458" name="Default Changelist" comment="精简后端代码by_GY" />
+    <list default="true" id="dc124d61-3d19-46a2-9d9e-7a70d0410458" name="Default Changelist" comment="精简后端代码by_GY">
+      <change afterPath="$PROJECT_DIR$/front/src/assets/topo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/components/Topo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/styles/element-ui.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/styles/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/styles/mixin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/styles/sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/styles/transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/styles/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/apis/basic_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/apis/basic_operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/apis/vertify.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/apis/vertify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/SocketTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/SocketTest.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/store/store.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +45,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mbBCVweF96oQa5UA42pvIfSQBt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,16 +56,51 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/socket-demo/back" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/front/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\代码文件\python\network\socket-demo\back" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\代码文件\python\network\front\src" />
+      <recent name="E:\代码文件\python\network\front\src\assets" />
       <recent name="E:\代码文件\python\network\socket-demo\back" />
       <recent name="E:\代码文件\python\network\socket-demo\apis" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\代码文件\python\network\socket-demo\back" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="network" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/back" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/back/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -62,7 +116,8 @@
       <workItem from="1609753217166" duration="9536000" />
       <workItem from="1609838709788" duration="712000" />
       <workItem from="1609858306565" duration="103000" />
-      <workItem from="1609858440978" duration="955000" />
+      <workItem from="1609858440978" duration="1574000" />
+      <workItem from="1609907361398" duration="12097000" />
     </task>
     <task id="LOCAL-00001" summary="添加操作步骤代码">
       <created>1609777199372</created>
@@ -78,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609859377612</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="精简后端代码by_GY">
+      <created>1609859501206</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609859501206</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,13 +164,40 @@
     <option name="LAST_COMMIT_MESSAGE" value="精简后端代码by_GY" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="532" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609917480322">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="532" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1609917480322" />
+    <state width="1493" height="319" key="GridCell.Tab.0.bottom" timestamp="1609908971992">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="319" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609908971992" />
+    <state width="1493" height="319" key="GridCell.Tab.0.center" timestamp="1609908971991">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="319" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609908971991" />
+    <state width="1493" height="319" key="GridCell.Tab.0.left" timestamp="1609908971991">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="319" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609908971991" />
+    <state width="1493" height="319" key="GridCell.Tab.0.right" timestamp="1609908971992">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="319" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609908971992" />
     <state x="320" y="109" key="RollbackChangesDialog" timestamp="1609754031391">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="320" y="109" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1609754031391" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609777219943">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1609859516772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609777219943" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609859516772" />
+    <state x="394" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609918939386">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="394" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609918939386" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/network$app.coverage" NAME="app Coverage Results" MODIFIED="1609908949417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/back" />
   </component>
 </project>

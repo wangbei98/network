@@ -18,7 +18,7 @@ socketio = SocketIO(app,cors_allowed_origins='*')
 
 # 获取当前文件夹id
 Switch_ip = '192.168.5.5'
-Switch_password = '123456'
+Switch_password = 'CISCO'
 Router_ip = '192.168.5.1'
 Router_password = '123456'
 username='root'
@@ -67,7 +67,8 @@ class ReturnJ(object):
         #由于存在setattr,此处必须采用这种方式赋值
         self.__dict__['res'] = {
             'code': 200,
-            'msg': '请求成功!'
+            'message': '请求成功!',
+            'flag': True
         }
  
     def toJson(self):
@@ -96,12 +97,12 @@ def testCall():
   return ret.toJson()
 
 #操作步骤5
-@app.route('/api/vlan',methods=["POST"])
+@app.route('/api/telnet/vlan',methods=['POST'])
 def VlanAPI():
     parse = reqparse.RequestParser()
     parse.add_argument('ip', type=str, help='错误的ip', default='192.168.5.5')
     parse.add_argument('username', type=str, help='错误的username', default='root')
-    parse.add_argument('password', type=str, help='错误的password', default='123456')
+    parse.add_argument('password', type=str, help='错误的password', default='CISCO')
     args = parse.parse_args()
     # 获取当前文件夹id
     Switch_ip= args.get('ip')
@@ -112,23 +113,27 @@ def VlanAPI():
 
     # 配置Switch1划分VLAN10和VLAN20
 
-    excute(Switch_ip, username, Switch_password, './scripts/Split_Vlan.txt',socketio)
+    flag,message=excute(Switch_ip, username, Switch_password, './scripts/Split_Vlan.txt',socketio)
     data = {}
     ret = ReturnJ()
     ret.data = data
+    ret.flag=flag
+    ret.message = message
     return ret.toJson()
 
 #操作步骤6
-@app.route('/api/trunk',methods=["GET"])
+@app.route('/api/telnet/trunk',methods=["POST"])
 def TrunkAPI():
-    excute(Switch_ip, username, Switch_password, './scripts/Trunk.txt',socketio)
+    flag,message=excute(Switch_ip, username, Switch_password, './scripts/Trunk.txt',socketio)
     data = {}
     ret = ReturnJ()
     ret.data = data
+    ret.flag=flag
+    ret.message = message
     return ret.toJson()
 
 #操作步骤7
-@app.route('/api/divide',methods=["POST"])
+@app.route('/api/telnet/divide',methods=["PUT"])
 def DivideAPI():
 
     parse = reqparse.RequestParser()
@@ -143,50 +148,55 @@ def DivideAPI():
 
     # 这里调用（操作/验证）脚本
     # 将Router fa0/0划分为两个子接口
-    excute(Router_ip, username, Router_password, './scripts/Router.txt',socketio)
+    flag,message=excute(Router_ip, username, Router_password, './scripts/Router.txt',socketio)
     data = {}
     ret = ReturnJ()
     ret.data = data
+    ret.flag=flag
+    ret.message = message
     return ret.toJson()
 
 #验证步骤4
 #show vlan brief
-@app.route('/api/vertifyVlan',methods=["GET"])
+@app.route('/api/telnet/vlan',methods=["GET"])
 def VertifyVlanAPI():
 
 
     # 这里调用（操作/验证）脚本
 
     # 配置Switch1划分VLAN10和VLAN20
-    vertify.vertifyVlan(Switch_ip, username, Switch_password, socketio)
+    flag,message = vertify.vertifyVlan(Switch_ip, username, Switch_password, socketio)
 
     data = {}
     ret = ReturnJ()
     ret.data = data
+    ret.flag = flag
+    ret.message = message
     return ret.toJson()
 
 #验证步骤5
 #ping
-@app.route('/api/ping',methods=["GET"])
+@app.route('/api/telnet/ping',methods=['GET'])
 def Ping():
 
-
+    #print("!!!!!!!!!!!!!!!!!!!!!!!!111")
     # 这里调用（操作/验证）脚本
 
     # 配置Switch1划分VLAN10和VLAN20
     commandPing1 = 'ping 192.168.10.2'
     commandPing2 = 'ping 192.168.20.2'
-    vertify.vertifyPing(Router_ip, username, Router_password, commandPing1, socketio)
-    vertify.vertifyPing(Router_ip, username, Router_password, commandPing2, socketio)
-
+    flag1,message1 = vertify.vertifyPing(Router_ip, username, Router_password, commandPing1, socketio)
+    flag2,message2 = vertify.vertifyPing(Router_ip, username, Router_password, commandPing2, socketio)
     data = {}
     ret = ReturnJ()
     ret.data = data
+    ret.flag = flag1 and flag2
+    ret.message = message1 + "  " + message2
     return ret.toJson()
 
 #验证步骤6
 #show ip route
-@app.route('/api/ipRoute',methods=["GET"])
+@app.route('/api/telnet/iproute',methods=["GET"])
 def ipRouteAPI():
 
     IP1 = "192.168.10.0"
@@ -195,10 +205,12 @@ def ipRouteAPI():
 
     # 这里调用（操作/验证）脚本
     # 将Router fa0/0划分为两个子接口
-    vertify.vertifyRouter(Router_ip, username, Router_password, IP1, IP2, IP3, socketio)
+    flag,message = vertify.vertifyRouter(Router_ip, username, Router_password, IP1, IP2, IP3, socketio)
     data = {}
     ret = ReturnJ()
     ret.data = data
+    ret.flag = flag
+    ret.message = message
     return ret.toJson()
 
 
