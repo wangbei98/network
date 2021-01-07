@@ -1,14 +1,23 @@
-# front
+<<<<<<< HEAD
+# vueAdmin-template
 
-> A Vue.js project
+> A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
+
+**Live demo:** http://panjiachen.github.io/vueAdmin-template
+
+[中文文档](https://github.com/PanJiaChen/vueAdmin-template/blob/master/README-zh.md)
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+
+# Clone project
+git clone https://github.com/PanJiaChen/vueAdmin-template.git
+
+# Install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:9528
 npm run dev
 
 # build for production with minification
@@ -18,4 +27,23 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Demo
+![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
+
+## Extra
+If you want router permission && generate menu by user roles , you can use this branch [permission-control](https://github.com/PanJiaChen/vueAdmin-template/tree/permission-control)
+
+## Related Project
+ [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+
+ [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
+
+
+## License
+[MIT](https://github.com/PanJiaChen/vueAdmin-template/blob/master/LICENSE) license.
+
+Copyright (c) 2017-present PanJiaChen
+=======
+# dn-portal
+
+>>>>>>> c701b736e8d1b20b85d55de456c5664c432bdf62

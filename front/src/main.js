@@ -1,27 +1,27 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+
+import 'normalize.css/normalize.css'// A modern alternative to CSS resets
+
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import locale from 'element-ui/lib/locale/lang/zh-CN'
+
+import '@/styles/index.scss' // global css
+
+import router from '@/router'
 import App from './App'
-import router from './router'
-
-import {store} from './store/store.js'
-
-Vue.config.productionTip = false
 
 import VueSocketio from 'vue-socket.io';  
 
 Vue.use(VueSocketio,'http://127.0.0.1:5000/chat');
 
-// 引入 element ui
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(ElementUI);
+Vue.use(ElementUI, { locale })
 
-/* eslint-disable no-new */
+Vue.config.productionTip = false
+
 new Vue({
   el: '#app',
   router,
-  store,
-  components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  components: { App }
 })

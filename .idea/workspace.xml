@@ -20,21 +20,118 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc124d61-3d19-46a2-9d9e-7a70d0410458" name="Default Changelist" comment="精简后端代码by_GY">
-      <change afterPath="$PROJECT_DIR$/front/src/assets/topo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/components/Topo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/styles/element-ui.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/styles/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/styles/mixin.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/styles/sidebar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/styles/transition.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/styles/variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/apis/basic_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/apis/basic_operation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/apis/vertify.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/apis/vertify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/SocketTest.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/SocketTest.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/build/check-versions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/build/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/build/vue-loader.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/build/webpack.base.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/build/webpack.dev.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/build/webpack.prod.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/assets/topo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/SocketTest.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/Topo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/store/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/styles/element-ui.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/styles/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/styles/mixin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/styles/sidebar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/styles/transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/styles/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network(1)/network/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network(1)/network/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network(1)/network/static/css/app.a2e2d2d219b7a4448935ea4ce7334e13.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network(1)/network/static/fonts/element-icons.6f0a763.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network(1)/network/static/img/topo.72cb93f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network(1)/network/static/js/app.fcab3efbaff284d9b763.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network(1)/network/static/js/manifest.547bde940eeb123c7df1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network(1)/network/static/js/vendor.2001ce1f3e3540e1c9af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/README-zh.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/build/check-versions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/build/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/build/vue-loader.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/build/webpack.base.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/build/webpack.dev.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/build/webpack.prod.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network/static/css/app.a2e2d2d219b7a4448935ea4ce7334e13.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network/static/fonts/element-icons.6f0a763.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network/static/img/topo.72cb93f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network/static/js/app.fcab3efbaff284d9b763.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network/static/js/manifest.547bde940eeb123c7df1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/network/static/js/vendor.2001ce1f3e3540e1c9af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/api/telnet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/assets/topo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/components/Topo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/data/img/VOIP_router.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/data/img/VOIP_switch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/data/img/host.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/data/img/router.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/data/img/server.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/data/img/switch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/data/nodeData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/styles/element-ui.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/styles/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/styles/mixin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/styles/sidebar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/styles/transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/styles/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/utils/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/utils/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/src/utils/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network-portal/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/css/app.9c790c5e4c6076c955d0eff9a3d1b821.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/fonts/element-icons.6f0a763.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/img/topo.4a56682.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/js/0.93135a5e02c954cdafe6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/js/1.7791c5a9874e9eca86e0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/js/2.63931ff051c36a88b254.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/js/app.0cb0c2ec95c7be5eb3ac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/js/manifest.e4e8dbe786ce09ddfadb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/static/js/vendor.5f2555a65d1eed5cf388.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +153,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/front/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -73,7 +170,10 @@
       <recent name="E:\代码文件\python\network\socket-demo\back" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.App.vue">
+    <configuration name="App.vue" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/network/network-portal-master/src/App.vue" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="network" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -98,6 +198,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.App.vue" />
         <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
@@ -117,7 +218,10 @@
       <workItem from="1609838709788" duration="712000" />
       <workItem from="1609858306565" duration="103000" />
       <workItem from="1609858440978" duration="1574000" />
-      <workItem from="1609907361398" duration="12097000" />
+      <workItem from="1609907361398" duration="12449000" />
+      <workItem from="1609934962243" duration="87000" />
+      <workItem from="1609987224216" duration="6580000" />
+      <workItem from="1609998556774" duration="278000" />
     </task>
     <task id="LOCAL-00001" summary="添加操作步骤代码">
       <created>1609777199372</created>
@@ -168,22 +272,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="532" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1609917480322" />
-    <state width="1493" height="319" key="GridCell.Tab.0.bottom" timestamp="1609908971992">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1609935059735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="319" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609908971992" />
-    <state width="1493" height="319" key="GridCell.Tab.0.center" timestamp="1609908971991">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1609935059735" />
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1609998479323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="319" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609908971991" />
-    <state width="1493" height="319" key="GridCell.Tab.0.left" timestamp="1609908971991">
+    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609998479323" />
+    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1609998479323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="319" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609908971991" />
-    <state width="1493" height="319" key="GridCell.Tab.0.right" timestamp="1609908971992">
+    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609998479323" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1609998479322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="319" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609908971992" />
+    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609998479322" />
+    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1609998479323">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609998479323" />
     <state x="320" y="109" key="RollbackChangesDialog" timestamp="1609754031391">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
